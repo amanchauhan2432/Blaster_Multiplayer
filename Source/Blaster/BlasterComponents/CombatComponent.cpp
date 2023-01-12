@@ -5,6 +5,7 @@
 #include "Blaster/Character/MainCharacter.h"
 #include "Blaster/Weapon/Weapon.h"
 #include "Engine/SkeletalMeshSocket.h"
+#include "Net/UnrealNetwork.h"
 
 // Sets default values for this component's properties
 UCombatComponent::UCombatComponent()
@@ -31,6 +32,13 @@ void UCombatComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActo
 
 }
 
+void UCombatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+	DOREPLIFETIME(UCombatComponent, bAiming);
+}
+
 void UCombatComponent::EquipWeapon(AWeapon* Weapon)
 {
 	if (Weapon && MainCharacter)
@@ -38,8 +46,19 @@ void UCombatComponent::EquipWeapon(AWeapon* Weapon)
 		Weapon->SetWeaponState(EWeaponState::EWS_Equipped);
 
 		MainCharacter->GetMesh()->GetSocketByName(FName("WeaponSocket"))->AttachActor(Weapon, MainCharacter->GetMesh());
+		MainCharacter->bIsWeaponEquipped = true;
 
 		Weapon->SetOwner(MainCharacter);
-		Weapon->ShowPickupWidget(false);
 	}
+}
+
+void UCombatComponent::SetAiming(bool bIsAiming)
+{
+	bAiming = bIsAiming;
+	ServerSetAiming(bIsAiming);
+}
+
+void UCombatComponent::ServerSetAiming_Implementation(bool bIsAiming)
+{
+	bAiming = bIsAiming;
 }

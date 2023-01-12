@@ -1,5 +1,5 @@
 /FI "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Runtime\ResonanceAudio\Intermediate\Build\Win64\UnrealEditor\Development\ResonanceAudio\Definitions.ResonanceAudio.h" 
-/FI "C:\Users\Nama\Documents\Unreal Projects\Blaster\Intermediate\Build\Win64\BlasterEditor\Development\UnrealEd\SharedPCH.UnrealEd.NoShadow.h" 
+/FI "C:\Users\Nama\Documents\Unreal Projects\Blaster_Multiplayer\Intermediate\Build\Win64\BlasterEditor\Development\UnrealEd\SharedPCH.UnrealEd.NoShadow.h" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Source" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Runtime\ResonanceAudio\Source\ResonanceAudio\Private" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Core" 

@@ -27,6 +27,11 @@ public:
 	UPROPERTY(VisibleAnywhere)
 	class UCombatComponent* Combat;
 
+	UPROPERTY(Replicated)
+	bool bIsWeaponEquipped;
+
+	bool IsAiming();
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -42,7 +47,11 @@ public:
 	void MoveForward(float AxisValue);
 	void MoveRight(float AxisValue);
 	void Equip();
-	
+	void CrouchButtonPressed();
+
+	void AimButtonPressed();
+	void AimButtonReleased();
+
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
 	void SetOverlappingWeapon(class AWeapon* Weapon);
@@ -56,5 +65,8 @@ private:
 
 	UFUNCTION()
 	void OnRep_OverlappingWeapon(class AWeapon* LastWeapon);
+
+	UFUNCTION(Server, Reliable)
+	void ServerEquip();
 
 };

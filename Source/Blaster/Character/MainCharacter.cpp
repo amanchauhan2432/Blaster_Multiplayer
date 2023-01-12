@@ -17,6 +17,7 @@ AMainCharacter::AMainCharacter()
 {
 	bUseControllerRotationYaw = false;
 	GetCharacterMovement()->bOrientRotationToMovement = true;
+	GetCharacterMovement()->NavAgentProps.bCanCrouch = true;
 
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	PrimaryActorTick.bCanEverTick = true;
@@ -61,7 +62,13 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAxis(TEXT("LookRight"), this, &APawn::AddControllerYawInput);
 
 	PlayerInputComponent->BindAction(FName("Jump"), IE_Pressed, this, &ACharacter::Jump);
+
 	PlayerInputComponent->BindAction(FName("Equip"), IE_Pressed, this, &AMainCharacter::Equip);
+
+	PlayerInputComponent->BindAction(FName("Crouch"), IE_Pressed, this, &AMainCharacter::CrouchButtonPressed);
+
+	PlayerInputComponent->BindAction(FName("Aim"), IE_Pressed, this, &AMainCharacter::AimButtonPressed);
+	PlayerInputComponent->BindAction(FName("Aim"), IE_Released, this, &AMainCharacter::AimButtonReleased);
 
 }
 
@@ -107,6 +114,7 @@ void AMainCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLi
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME_CONDITION(AMainCharacter, OverlappingWeapon, COND_OwnerOnly);
+	DOREPLIFETIME(AMainCharacter, bIsWeaponEquipped);
 }
 
 void AMainCharacter::OnRep_OverlappingWeapon(AWeapon* LastWeapon)
@@ -133,8 +141,57 @@ void AMainCharacter::PostInitializeComponents()
 
 void AMainCharacter::Equip()
 {
-	if (Combat && HasAuthority())
+	if (Combat)
+	{
+		if (HasAuthority())
+		{
+			Combat->EquipWeapon(OverlappingWeapon);
+		}
+		else
+		{
+			ServerEquip();
+		}
+		
+	}
+}
+
+void AMainCharacter::ServerEquip_Implementation()
+{
+	if (Combat)
 	{
 		Combat->EquipWeapon(OverlappingWeapon);
 	}
+}
+
+void AMainCharacter::CrouchButtonPressed()
+{
+	if (bIsCrouched)
+	{
+		UnCrouch();
+	}
+	else
+	{
+		Crouch();
+	}
+}
+
+void AMainCharacter::AimButtonPressed()
+{
+	if (bIsWeaponEquipped && Combat)
+	{
+		Combat->SetAiming(true);
+	}
+}
+
+void AMainCharacter::AimButtonReleased()
+{
+	if (Combat)
+	{
+		Combat->SetAiming(false);
+	}
+}
+
+bool AMainCharacter::IsAiming()
+{
+	return (Combat && Combat->bAiming);
 }

@@ -3,14 +3,14 @@
         {
             "name": "BlasterEditor Editor Win64 Development (Blaster)",
             "intelliSenseMode": "msvc-x64",
-            "compileCommands": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Blaster.json",
+            "compileCommands": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Blaster.json",
             "cStandard": "c17",
             "cppStandard": "c++17"
         },
         {
             "name": "Win32",
             "intelliSenseMode": "msvc-x64",
-            "compileCommands": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default.json",
+            "compileCommands": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default.json",
             "cStandard": "c17",
             "cppStandard": "c++17"
         }

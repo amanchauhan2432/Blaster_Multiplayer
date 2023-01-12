@@ -1,5 +1,5 @@
 /FI "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Runtime\Steam\SteamShared\Intermediate\Build\Win64\UnrealEditor\Development\SteamShared\Definitions.SteamShared.h" 
-/FI "C:\Users\Nama\Documents\Unreal Projects\Blaster\Intermediate\Build\Win64\BlasterEditor\Development\Core\SharedPCH.Core.ShadowErrors.h" 
+/FI "C:\Users\Nama\Documents\Unreal Projects\Blaster_Multiplayer\Intermediate\Build\Win64\BlasterEditor\Development\Core\SharedPCH.Core.ShadowErrors.h" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Source" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Plugins\Runtime\Steam\SteamShared\Source\SteamShared\Private" 
 /I "C:\Program Files\Epic Games\UE_5.0\Engine\Intermediate\Build\Win64\UnrealEditor\Inc\Core" 

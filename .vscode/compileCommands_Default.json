@@ -1,112 +1,112 @@
 [
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\MultiplayerSession.Build.cs",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\MultiplayerSession.Build.cs",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\Menu.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\Menu.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\MultiplayerSession.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\MultiplayerSession.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\MultiplayerSessionSubsystem.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Private\\MultiplayerSessionSubsystem.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\Menu.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\Menu.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\MultiplayerSession.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\MultiplayerSession.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\MultiplayerSessionSubsystem.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Plugins\\MultiplayerSession\\Source\\MultiplayerSession\\Public\\MultiplayerSessionSubsystem.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\MultiplayerSession.38.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Blaster.Build.cs",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Blaster.Build.cs",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Blaster.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Blaster.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Blaster.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Blaster.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\BlasterComponents\\CombatComponent.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\BlasterComponents\\CombatComponent.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\BlasterComponents\\CombatComponent.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\BlasterComponents\\CombatComponent.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Character\\CharacterAnimInstance.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Character\\CharacterAnimInstance.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Character\\CharacterAnimInstance.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Character\\CharacterAnimInstance.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Character\\MainCharacter.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Character\\MainCharacter.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Character\\MainCharacter.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Character\\MainCharacter.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\GameMode\\LobbyGameMode.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\GameMode\\LobbyGameMode.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\GameMode\\LobbyGameMode.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\GameMode\\LobbyGameMode.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\HUD\\OverheadWidget.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\HUD\\OverheadWidget.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\HUD\\OverheadWidget.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\HUD\\OverheadWidget.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Weapon\\Weapon.cpp",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Weapon\\Weapon.cpp",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	},
 	{
-		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\Source\\Blaster\\Weapon\\Weapon.h",
-		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
+		"file": "C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\Source\\Blaster\\Weapon\\Weapon.h",
+		"command": "\"C:\\Program Files (x86)\\Microsoft Visual Studio\\2019\\Community\\VC\\Tools\\MSVC\\14.29.30133\\bin\\HostX64\\x64\\cl.exe\" @\"C:\\Users\\Nama\\Documents\\Unreal Projects\\Blaster_Multiplayer\\.vscode\\compileCommands_Default\\Blaster.214.rsp\"",
 		"directory": "C:\\Program Files\\Epic Games\\UE_5.0\\Engine\\Source"
 	}
 ]
