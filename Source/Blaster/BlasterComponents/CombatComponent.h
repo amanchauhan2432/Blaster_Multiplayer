@@ -37,6 +37,12 @@ private:
 	class AMainCharacter* MainCharacter;
 	void EquipWeapon(class AWeapon* Weapon);
 
+	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
+	AWeapon* EquippedWeapon;
+
+	UFUNCTION()
+	void OnRep_EquippedWeapon();
+
 	void SetAiming(bool bIsAiming);
 
 	UFUNCTION(Server, Reliable)

@@ -6,6 +6,7 @@
 #include "Blaster/Weapon/Weapon.h"
 #include "Engine/SkeletalMeshSocket.h"
 #include "Net/UnrealNetwork.h"
+#include "GameFramework/CharacterMovementComponent.h"
 
 // Sets default values for this component's properties
 UCombatComponent::UCombatComponent()
@@ -36,6 +37,7 @@ void UCombatComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& Out
 {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
+	DOREPLIFETIME(UCombatComponent, EquippedWeapon);
 	DOREPLIFETIME(UCombatComponent, bAiming);
 }
 
@@ -43,12 +45,25 @@ void UCombatComponent::EquipWeapon(AWeapon* Weapon)
 {
 	if (Weapon && MainCharacter)
 	{
-		Weapon->SetWeaponState(EWeaponState::EWS_Equipped);
+		EquippedWeapon = Weapon;
+		EquippedWeapon->SetWeaponState(EWeaponState::EWS_Equipped);
 
 		MainCharacter->GetMesh()->GetSocketByName(FName("WeaponSocket"))->AttachActor(Weapon, MainCharacter->GetMesh());
 		MainCharacter->bIsWeaponEquipped = true;
 
-		Weapon->SetOwner(MainCharacter);
+		EquippedWeapon->SetOwner(MainCharacter);
+
+		MainCharacter->GetCharacterMovement()->bOrientRotationToMovement = false;
+		MainCharacter->bUseControllerRotationYaw = true;
+	}
+}
+
+void UCombatComponent::OnRep_EquippedWeapon()
+{
+	if (MainCharacter && EquippedWeapon)
+	{
+		MainCharacter->GetCharacterMovement()->bOrientRotationToMovement = false;
+		MainCharacter->bUseControllerRotationYaw = true;
 	}
 }
 
