@@ -4,7 +4,7 @@ Welcome to the Multiplayer Shooter Game project! This project is built using the
 
 # Getting Started
 
-    * Clone or download the repository onto your local machine
+* Clone or download the repository onto your local machine
     * Open the project in Unreal Engine
     * Press the play button to start the game
 
