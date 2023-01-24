@@ -71,9 +71,19 @@ void UCombatComponent::SetAiming(bool bIsAiming)
 {
 	bAiming = bIsAiming;
 	ServerSetAiming(bIsAiming);
+
+	if (MainCharacter)
+	{
+		MainCharacter->GetCharacterMovement()->MaxWalkSpeed = bAiming ? 200.f : 350.f;
+	}
 }
 
 void UCombatComponent::ServerSetAiming_Implementation(bool bIsAiming)
 {
 	bAiming = bIsAiming;
+	
+	if (MainCharacter)
+	{
+		MainCharacter->GetCharacterMovement()->MaxWalkSpeed = bAiming ? 200.f : 350.f;
+	}
 }
