@@ -12,6 +12,7 @@
 #include "Blaster/Weapon/Weapon.h"
 #include "Blaster/BlasterComponents/CombatComponent.h"
 #include "Components/CapsuleComponent.h"
+#include "Kismet/KismetMathLibrary.h"
 
 // Sets default values
 AMainCharacter::AMainCharacter()
@@ -39,6 +40,12 @@ AMainCharacter::AMainCharacter()
 
 	GetCapsuleComponent()->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
 	GetMesh()->SetCollisionResponseToChannel(ECC_Camera, ECR_Ignore);
+
+	GetCharacterMovement()->RotationRate = FRotator(0.f, 850.f, 0.f);
+
+	TurningInPlace = ETurningInPlace::ETIN_NotTurning;
+	NetUpdateFrequency = 66.f;
+	MinNetUpdateFrequency = 33.f;
 }
 
 // Called when the game starts or when spawned
@@ -53,6 +60,7 @@ void AMainCharacter::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 
+	AimOffset(DeltaTime);
 }
 
 // Called to bind functionality to input
@@ -95,6 +103,63 @@ void AMainCharacter::MoveRight(float AxisValue)
 		const FVector Direction = FRotationMatrix(Rotation).GetUnitAxis(EAxis::Y);
 
 		AddMovementInput(Direction, AxisValue);
+	}
+}
+
+void AMainCharacter::AimOffset(float DeltaTime)
+{
+
+	if (Combat && Combat->EquippedWeapon == nullptr) return;
+
+	FVector Velocity = GetVelocity();
+	Velocity.Z = 0.f;
+	float Speed = Velocity.Size();
+	bool bIsInAir = GetCharacterMovement()->IsFalling();
+	if (Speed == 0.f && !bIsInAir)
+	{
+		FRotator CurrentAimRotation = FRotator(0.f, GetBaseAimRotation().Yaw, 0.f);
+		FRotator DeltaRotation = UKismetMathLibrary::NormalizedDeltaRotator(CurrentAimRotation, StartAimRotation);
+		AO_Yaw = DeltaRotation.Yaw;
+
+		if (TurningInPlace == ETurningInPlace::ETIN_NotTurning)
+		{
+			InterpAO_Yaw = AO_Yaw;
+		}
+
+		if (AO_Yaw > 90.f)
+		{
+			TurningInPlace = ETurningInPlace::ETIN_Right;
+		}
+		if (AO_Yaw < -90.f)
+		{
+			TurningInPlace = ETurningInPlace::ETIN_Left;
+		}
+		if (TurningInPlace != ETurningInPlace::ETIN_NotTurning)
+		{
+			InterpAO_Yaw = FMath::FInterpTo(InterpAO_Yaw, 0.f, DeltaTime, 3.f);
+			AO_Yaw = InterpAO_Yaw;
+			if (FMath::Abs(AO_Yaw) < 15.f)
+			{
+				TurningInPlace = ETurningInPlace::ETIN_NotTurning;
+				StartAimRotation = FRotator(0.f, GetBaseAimRotation().Yaw, 0.f);
+			}
+		}
+	}
+	if (Speed > 0 || bIsInAir)
+	{
+		StartAimRotation = FRotator(0.f, GetBaseAimRotation().Yaw, 0.f);
+		AO_Yaw = 0.f;
+
+		TurningInPlace = ETurningInPlace::ETIN_NotTurning;
+	}
+
+	AO_Pitch = GetBaseAimRotation().Pitch;
+	if (AO_Pitch > 90.f && !IsLocallyControlled())
+	{
+		// Map pitch from [270, 360) to [-90,0)
+		FVector2d InRange(270.f,360.f);
+		FVector2D OutRange(-90.f, 0.f);
+		AO_Pitch = FMath::GetMappedRangeValueClamped(InRange, OutRange, AO_Pitch);
 	}
 }
 
@@ -155,7 +220,6 @@ void AMainCharacter::Equip()
 		{
 			ServerEquip();
 		}
-		
 	}
 }
 
@@ -198,4 +262,11 @@ void AMainCharacter::AimButtonReleased()
 bool AMainCharacter::IsAiming()
 {
 	return (Combat && Combat->bAiming);
+}
+
+AWeapon* AMainCharacter::GetEquippedWeapon()
+{
+	if (Combat == nullptr) return nullptr;
+
+	return Combat->EquippedWeapon;
 }

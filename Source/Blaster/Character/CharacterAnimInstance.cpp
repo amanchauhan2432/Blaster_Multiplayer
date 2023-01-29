@@ -5,6 +5,7 @@
 #include "MainCharacter.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "Kismet/KismetMathLibrary.h"
+#include "Blaster/Weapon/Weapon.h"
 
 void UCharacterAnimInstance::NativeInitializeAnimation()
 {
@@ -29,8 +30,11 @@ void UCharacterAnimInstance::NativeUpdateAnimation(float DeltaTime)
     bIsAccelarating = MainCharacter->GetCharacterMovement()->GetCurrentAcceleration().Size() ? true : false;
 
     bIsWeaponEquipped = MainCharacter->bIsWeaponEquipped;
+    EquippedWeapon = MainCharacter->GetEquippedWeapon();
     bIsCrouched = MainCharacter->bIsCrouched;
     bIsAiming = MainCharacter->IsAiming();
+
+    TurningInPlace = MainCharacter->GetTurningInPlace();
     
     // Strafing
     FRotator AimRotation = MainCharacter->GetBaseAimRotation();
@@ -47,4 +51,17 @@ void UCharacterAnimInstance::NativeUpdateAnimation(float DeltaTime)
     const float Target = Delta.Yaw / DeltaTime;
     const float Interp = FMath::FInterpTo(Lean, Target, DeltaTime, 6.f);
     Lean = FMath::Clamp(Interp, -90.f, 90.f);
+
+    AO_Yaw = MainCharacter->GetAOYaw();
+    AO_Pitch = MainCharacter->GetAOPitch();
+
+    if (bIsWeaponEquipped && EquippedWeapon && EquippedWeapon->GetWeaponMesh() && MainCharacter)
+    {
+        LeftHandTransform = EquippedWeapon->GetWeaponMesh()->GetSocketTransform(FName("LeftHandSocket", ERelativeTransformSpace::RTS_World));
+        FVector OutPosition;
+        FRotator OutRotation;
+        MainCharacter->GetMesh()->TransformToBoneSpace(FName("hand_r"), LeftHandTransform.GetLocation(), FRotator::ZeroRotator, OutPosition, OutRotation);
+        LeftHandTransform.SetLocation(OutPosition);
+        LeftHandTransform.SetRotation(FQuat(OutRotation));
+    }
 }

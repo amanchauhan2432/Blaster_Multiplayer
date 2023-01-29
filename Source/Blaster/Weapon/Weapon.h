@@ -60,4 +60,6 @@ private:
 
 public:
 	void SetWeaponState(EWeaponState State);
+
+	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() { return WeaponMesh; }
 };
