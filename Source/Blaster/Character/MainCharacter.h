@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "Blaster/BlasterTypes/TurningInPlace.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
@@ -32,9 +33,11 @@ public:
 
 	bool IsAiming();
 
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	void AimOffset(float DeltaTime);
 
 
 public:	
@@ -58,6 +61,13 @@ public:
 
 	virtual void PostInitializeComponents() override;
 
+	FORCEINLINE float GetAOYaw() const { return AO_Yaw; }
+	FORCEINLINE float GetAOPitch() const { return AO_Pitch; }
+
+	class AWeapon* GetEquippedWeapon();
+
+	FORCEINLINE ETurningInPlace GetTurningInPlace() { return TurningInPlace; }
+
 private:
 
 	UPROPERTY(ReplicatedUsing = OnRep_OverlappingWeapon)
@@ -69,4 +79,10 @@ private:
 	UFUNCTION(Server, Reliable)
 	void ServerEquip();
 
+	float AO_Yaw;
+	float InterpAO_Yaw;
+	float AO_Pitch;
+	FRotator StartAimRotation;
+
+	ETurningInPlace TurningInPlace;
 };
