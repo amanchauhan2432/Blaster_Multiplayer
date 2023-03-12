@@ -4,6 +4,7 @@
 #include "Components/WidgetComponent.h"
 #include "Blaster/Character/MainCharacter.h"
 #include "Net/UnrealNetwork.h"
+#include "Casing.h"
 
 // Sets default values
 AWeapon::AWeapon()
@@ -113,4 +114,16 @@ void AWeapon::OnRep_WeaponState()
 			break;
 	}
 	
+}
+
+void AWeapon::Fire(const FVector& HitTarget)
+{
+	FTransform AmmoSocketTransform = GetWeaponMesh()->GetSocketTransform(FName("AmmoEject"));
+	if (FireAnimation && CasingClass)
+	{
+		GetWeaponMesh()->PlayAnimation(FireAnimation, false);
+
+		FRotator RandomRotation{ FMath::RandRange(-180.f, 180.f), FMath::RandRange(-180.f, 180.f) , FMath::RandRange(-180.f, 180.f) };
+		GetWorld()->SpawnActor<ACasing>(CasingClass, AmmoSocketTransform.GetLocation(), RandomRotation);
+    }
 }

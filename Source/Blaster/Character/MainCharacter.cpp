@@ -82,6 +82,9 @@ void AMainCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputCompo
 	PlayerInputComponent->BindAction(FName("Aim"), IE_Pressed, this, &AMainCharacter::AimButtonPressed);
 	PlayerInputComponent->BindAction(FName("Aim"), IE_Released, this, &AMainCharacter::AimButtonReleased);
 
+	PlayerInputComponent->BindAction(FName("Fire"), IE_Pressed, this, &AMainCharacter::FireButtonPressed);
+	PlayerInputComponent->BindAction(FName("Fire"), IE_Released, this, &AMainCharacter::FireButtonReleased);
+
 }
 
 void AMainCharacter::MoveForward(float AxisValue)
@@ -269,4 +272,31 @@ AWeapon* AMainCharacter::GetEquippedWeapon()
 	if (Combat == nullptr) return nullptr;
 
 	return Combat->EquippedWeapon;
+}
+
+void AMainCharacter::FireButtonPressed()
+{
+	if (Combat)
+	{
+		Combat->FireButtonPressed(true);
+	}
+}
+
+void AMainCharacter::FireButtonReleased()
+{
+	if (Combat)
+	{
+		Combat->FireButtonPressed(false);
+	}
+}
+
+void AMainCharacter::PlayFireMontage(bool bAiming)
+{
+	UAnimInstance* AnimInstance = GetMesh()->GetAnimInstance();
+	if (AnimInstance && FireWeaponMontage)
+	{
+		AnimInstance->Montage_Play(FireWeaponMontage);
+		FName SectionName = bAiming ? FName("Rifle_Aim") : FName("Rifle_Hip");
+		AnimInstance->Montage_JumpToSection(SectionName);
+	}
 }

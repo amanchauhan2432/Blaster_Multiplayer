@@ -62,4 +62,12 @@ public:
 	void SetWeaponState(EWeaponState State);
 
 	FORCEINLINE USkeletalMeshComponent* GetWeaponMesh() { return WeaponMesh; }
+
+	virtual void Fire(const FVector& HitTarget);
+	
+	UPROPERTY(EditAnywhere)
+	class UAnimationAsset* FireAnimation;
+
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<class ACasing> CasingClass;
 };

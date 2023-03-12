@@ -68,6 +68,8 @@ public:
 
 	FORCEINLINE ETurningInPlace GetTurningInPlace() { return TurningInPlace; }
 
+	void PlayFireMontage(bool bAiming);
+
 private:
 
 	UPROPERTY(ReplicatedUsing = OnRep_OverlappingWeapon)
@@ -85,4 +87,10 @@ private:
 	FRotator StartAimRotation;
 
 	ETurningInPlace TurningInPlace;
+
+	void FireButtonPressed();
+	void FireButtonReleased();
+		
+	UPROPERTY(EditAnywhere)
+	class UAnimMontage* FireWeaponMontage;
 };
