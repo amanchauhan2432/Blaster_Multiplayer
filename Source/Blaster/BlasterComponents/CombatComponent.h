@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "Blaster/HUD/BlasterHUD.h"
 #include "CombatComponent.generated.h"
 
 #define TRACE_LENGTH 80000.f
@@ -29,6 +30,8 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
+	void Fire();
+
 	void FireButtonPressed(bool bPressed);
 
 	UFUNCTION(Server, Reliable)
@@ -39,6 +42,8 @@ protected:
 
 	void TraceUnderCrosshairs(FHitResult& TraceHitResult);
 
+	void SetHUDCrosshairs(float DeltaTime);
+
 private:
 	// Variables
 	UPROPERTY(Replicated)
@@ -47,6 +52,8 @@ private:
 	// Functions
 	class AMainCharacter* MainCharacter;
 	void EquipWeapon(class AWeapon* Weapon);
+	class AMainPlayerController* Controller;
+	class ABlasterHUD* HUD;
 
 	UPROPERTY(ReplicatedUsing = OnRep_EquippedWeapon)
 	AWeapon* EquippedWeapon;
@@ -60,4 +67,29 @@ private:
 	void ServerSetAiming(bool bIsAiming);
 
 	bool bFirePressed;
+
+	FHitResult HitResult;
+
+	// HUD and Crosshairs
+
+	FHUDPackage HUDPackage;
+
+	float CrosshairVelocityFactor;
+	float CrosshairInAirFactor;
+	float CrosshairAimingFactor;
+	float CrosshairAimCharFactor;
+	float CrosshairShootingFactor;
+
+	// Aiming and FOV
+
+	float DefaultFOV;
+	float CurrentFOV;
+
+	void InterpFOV(float DeltaTime);
+
+	// Automatic Fire
+
+	FTimerHandle FireTimer;
+	void StartFireTimer();
+	void FireTimerFinished();
 };

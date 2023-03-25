@@ -5,10 +5,11 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Blaster/BlasterTypes/TurningInPlace.h"
+#include "Blaster/Interfaces/InteractWithCrosshairsInterface.h"
 #include "MainCharacter.generated.h"
 
 UCLASS()
-class BLASTER_API AMainCharacter : public ACharacter
+class BLASTER_API AMainCharacter : public ACharacter, public IInteractWithCrosshairsInterface
 {
 	GENERATED_BODY()
 
@@ -37,8 +38,11 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
-	void AimOffset(float DeltaTime);
 
+	float CalculateSpeed();
+	void AimOffset(float DeltaTime);
+	void CalculateAO_Pitch();
+	void SimProxiesTurn();
 
 public:	
 	// Called every frame
@@ -67,8 +71,18 @@ public:
 	class AWeapon* GetEquippedWeapon();
 
 	FORCEINLINE ETurningInPlace GetTurningInPlace() { return TurningInPlace; }
+	FORCEINLINE bool ShouldRotateRootBone() { return bRotateRootBone; }
 
 	void PlayFireMontage(bool bAiming);
+	void PlayHitReactMontage();
+
+	UFUNCTION(NetMulticast, UnReliable)
+	void MulticastHit();
+
+	FVector GetHitTarget();
+
+	virtual void OnRep_ReplicatedMovement() override;
+
 
 private:
 
@@ -93,4 +107,16 @@ private:
 		
 	UPROPERTY(EditAnywhere)
 	class UAnimMontage* FireWeaponMontage;
+
+	UPROPERTY(EditAnywhere)
+	UAnimMontage* HitReactMontage;
+
+	void HideCameraIfCharacterClose();
+
+	bool bRotateRootBone;
+	float TurnThreshhold = 0.5f;
+	FRotator ProxyRotationLastFrame;
+	FRotator ProxyRotation;
+	float ProxyYaw;
+	float TimeSinceLastMovementReplication;
 };

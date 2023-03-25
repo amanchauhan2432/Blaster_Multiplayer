@@ -32,6 +32,23 @@ public:
 
 	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 
+	// Crosshairs Textures
+
+	UPROPERTY(EditAnywhere, Category = "Crosshairs")
+	class UTexture2D* CrosshairsCenter;
+
+	UPROPERTY(EditAnywhere, Category = "Crosshairs")
+	UTexture2D* CrosshairsTop;
+
+	UPROPERTY(EditAnywhere, Category = "Crosshairs")
+	UTexture2D* CrosshairsRight;
+
+	UPROPERTY(EditAnywhere, Category = "Crosshairs")
+	UTexture2D* CrosshairsBottom;
+
+	UPROPERTY(EditAnywhere, Category = "Crosshairs")
+	UTexture2D* CrosshairsLeft;
+
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
@@ -58,6 +75,14 @@ private:
 	UPROPERTY(VisibleAnywhere, Category = "Weapon Properties")
 	class UWidgetComponent* PickupWidget;
 
+	// Aiming and FOV
+	
+	UPROPERTY(EditAnywhere)
+	float ZoomedFOV = 45.f;
+
+	UPROPERTY(EditAnywhere)
+	float ZoomInterpSpeed = 30.f;
+
 public:
 	void SetWeaponState(EWeaponState State);
 
@@ -70,4 +95,16 @@ public:
 
 	UPROPERTY(EditAnywhere)
 	TSubclassOf<class ACasing> CasingClass;
+
+
+	// Automatic Fire
+	UPROPERTY(EditAnywhere, Category = Combat)
+	bool bAutomatic = true;
+
+	UPROPERTY(EditAnywhere, Category = Combat)
+	float FireDelay = 0.2f;
+
+	// Aiming and FOV
+	FORCEINLINE float GetZoomedFOV() { return ZoomedFOV; }
+	FORCEINLINE float GetInterpSpeed() { return ZoomInterpSpeed; }
 };
